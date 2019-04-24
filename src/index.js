@@ -1,37 +1,37 @@
 console.log('%c HI', 'color: firebrick')
 
 
-// const imgUrl = "https://dog.ceo/api/breeds/image/random/4"
-// let myDogArray = [];
-// fetch(imgUrl)
-// .then( response => response.json() )
-// .then( response => {
-//     for (let i = 0; i < response.message.length; i++) {
-//         myDogArray.push(response.message[i])
-//     }
-//     randomDogImages()
-// })
+const imgUrl = "https://dog.ceo/api/breeds/image/random/4"
+let myDogArray = [];
+fetch(imgUrl)
+.then( response => response.json() )
+.then( response => {
+    for (let i = 0; i < response.message.length; i++) {
+        myDogArray.push(response.message[i])
+    }
+    randomDogImages()
+})
 
-// console.log("my dog array", myDogArray)
+console.log("my dog array", myDogArray)
 
-// const randomImageContainer = document.getElementById('dog-image-container')
-// function randomDogImages () {
+const randomImageContainer = document.getElementById('dog-image-container')
+function randomDogImages () {
     
-//     let ul = document.createElement('ul')
-//     for (let i = 0; i < myDogArray.length; i++) {
+    let ul = document.createElement('ul')
+    for (let i = 0; i < myDogArray.length; i++) {
         
-//         let li = document.createElement('li')
+        let li = document.createElement('li')
         
-//         let imgTag = document.createElement('img')
-//         imgTag.setAttribute('src', myDogArray[i])
-//         imgTag.setAttribute('alt', 'cute random dog picture')
-//         imgTag.width = 200
+        let imgTag = document.createElement('img')
+        imgTag.setAttribute('src', myDogArray[i])
+        imgTag.setAttribute('alt', 'cute random dog picture')
+        imgTag.width = 200
 
-//         li.appendChild(imgTag)
-//         ul.appendChild(li)
-//     }
-//     randomImageContainer.appendChild(ul)
-// }
+        li.appendChild(imgTag)
+        ul.appendChild(li)
+    }
+    randomImageContainer.appendChild(ul)
+}
 
 
 
